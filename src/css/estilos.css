@@ -4,14 +4,47 @@
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
+.sour-gummy-title{
+    font-family: "Sour Gummy", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+}
+body{
+    background-image: url(/tictactoe/src/img/fondo.jpg);
+}
+/*Diseño general*/
 .container{
     margin: auto;
-    margin-top: 100px;
+    margin-top: 20px;
     width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+/*Diseño tabla de marcador*/
+.datos{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    background-color: rgba(65, 11, 132, 0.70);
+    border: 1px solid #fff;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+/*Diseño datos*/
+.dato{
+    text-align: center;
+    width: 30%;
+}
+h1{
+    color: rgba(65, 11, 132, 0.70);
+}
+/*Diseño de la cuadrícula*/
 .cuadricula{
     margin: auto;
     width: 300px;
@@ -19,23 +52,44 @@
     grid-template-columns: repeat(3,1fr);
     gap: 0;
     margin: 20px;
+    background-color: rgba(113, 14, 143, 0.50);
 }
+/*Diseño a cada casilla*/
 .casilla{
     width: 100px;
     height: 100px;
-    border: 1px solid #000;
+    border: 1px solid #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 60px;
+    color: #fff;
+    transition: 0.2s;
 }
+.casilla:hover{
+    transform: scale(0.9);
+}
+/*Diseño a los mensajes*/
+#mensajes{
+    margin-bottom: 10px;
+    color: rgba(128, 14, 84, 0.90);
+}
+.size{
+    font-size: 28px;
+}
+/*Diseño al botón al reiniciar*/
 #reiniciar{
     padding: 10px;
     width: 100px;
-    background-color: none;
-    border: 1px solid #000;
+    border: 1px solid #fff;
+    background-color: rgba(128, 14, 84, 0.50);
+    color: #fff;
     border-radius: 10px;
     font-size: 15px;
     font-weight: bold;
     cursor: pointer;
+    transition: 0.2s;
+}
+#reiniciar:hover{
+    transform: scale(1.1);
 }
